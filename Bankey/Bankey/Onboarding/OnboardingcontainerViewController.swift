@@ -18,9 +18,10 @@ class OnboardingcontainerViewController: UIViewController{
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        let page1 = ViewController1()
-        let page2 = ViewController2()
-        let page3 = ViewController3()
+        
+        let page1 = OnboardingViewController(imageName: "onboarding", titleText: "Bankey is faster, easier to use, and is much more efficient. It will make banking for you easier.")
+        let page2 = OnboardingViewController(imageName: "world", titleText: "Move your money around the world quickly and securely.")
+        let page3 = OnboardingViewController(imageName: "thumbsup", titleText: "Learn more at www.bankey.com")
         
         pages.append(page1)
         pages.append(page2)
@@ -62,55 +63,35 @@ class OnboardingcontainerViewController: UIViewController{
 }
 
 // MARK: -UIPageViewControllerDataSource
-extension OnboardingcontainerViewController: UIPageViewControllerDataSource{
+extension OnboardingcontainerViewController: UIPageViewControllerDataSource {
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         return getPreviousViewController(from: viewController)
     }
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         return getNextViewController(from: viewController)
     }
-    
+
     private func getPreviousViewController(from viewController: UIViewController) -> UIViewController? {
         guard let index = pages.firstIndex(of: viewController), index - 1 >= 0 else { return nil }
         currentVC = pages[index - 1]
         return pages[index - 1]
     }
-    
+
     private func getNextViewController(from viewController: UIViewController) -> UIViewController? {
-        guard let index = pages.firstIndex(of: viewController), index + 1 >= pages.count else { return nil }
+        guard let index = pages.firstIndex(of: viewController), index + 1 < pages.count else { return nil }
         currentVC = pages[index + 1]
         return pages[index + 1]
     }
-    
+
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return pages.count
     }
-    
+
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return pages.firstIndex(of: self.currentVC) ?? 0
     }
 }
 
 
-// MARK: -ViewControllers
-class ViewController1 : UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemGreen
-    }
-}
-
-class ViewController2 : UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemOrange
-    }
-}
-
-class ViewController3 : UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemPurple
-    }
-}
