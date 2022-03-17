@@ -16,6 +16,7 @@
 		64F7BEBE27D6639300E4698E /* BankeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F7BEBD27D6639300E4698E /* BankeyUITests.swift */; };
 		64F7BEC027D6639300E4698E /* BankeyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F7BEBF27D6639300E4698E /* BankeyUITestsLaunchTests.swift */; };
 		64F7BECF27D6685800E4698E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F7BECE27D6685800E4698E /* LoginView.swift */; };
+		64F8227427E35CD1007D83AD /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8227327E35CD1007D83AD /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		64F7BEBD27D6639300E4698E /* BankeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITests.swift; sourceTree = "<group>"; };
 		64F7BEBF27D6639300E4698E /* BankeyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		64F7BECE27D6685800E4698E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		64F8227327E35CD1007D83AD /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				6415E09A27E3466500FE364C /* OnboardingcontainerViewController.swift */,
+				64F8227327E35CD1007D83AD /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				64F7BECF27D6685800E4698E /* LoginView.swift in Sources */,
 				64F7BEA127D6639200E4698E /* LoginViewController.swift in Sources */,
+				64F8227427E35CD1007D83AD /* OnboardingViewController.swift in Sources */,
 				64F7BE9D27D6639200E4698E /* AppDelegate.swift in Sources */,
 				6415E09B27E3466500FE364C /* OnboardingcontainerViewController.swift in Sources */,
 			);
